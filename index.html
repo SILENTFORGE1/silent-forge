@@ -17,6 +17,9 @@
     <!-- Phosphor Icons -->
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
 
+    <!-- Lemon Squeezy Script -->
+    <script src="https://app.lemonsqueezy.com/js/lemon.js" defer></script>
+
     <style>
         :root {
             --bg-color: #020617;
@@ -106,6 +109,7 @@
                 <a href="#simulator" class="hover:text-white transition-colors">Demo</a>
                 <a href="#features" class="hover:text-white transition-colors">Features</a>
                 <a href="#pricing" class="hover:text-white transition-colors">Pricing</a>
+                <a href="#contact" class="hover:text-white transition-colors">Support</a>
             </div>
             
             <a href="#pricing" class="px-5 py-2 bg-white/10 hover:bg-white/20 rounded-full text-xs font-bold transition-all border border-white/5 ring-1 ring-white/10">
@@ -159,7 +163,6 @@
             
             <!-- Sidebar (Left) -->
             <div class="w-20 bg-[#020617] border-r border-white/5 flex flex-col items-center py-8 gap-8 hidden md:flex">
-                <!-- Tiny Logo -->
                 <div class="w-8 h-8 relative mb-4">
                      <svg viewBox="0 0 100 100" class="w-full h-full drop-shadow-[0_0_5px_rgba(249,115,22,0.8)]">
                         <circle cx="50" cy="50" r="20" class="fill-orange-500" />
@@ -176,20 +179,17 @@
             <!-- Main Input Area (Center) -->
             <div class="flex-1 p-8 flex flex-col relative bg-[#020617]">
                 
-                <!-- Logo Header -->
                 <div class="text-center mb-10">
                     <h3 class="text-4xl font-black text-white tracking-tighter leading-none">SILENT</h3>
                     <h3 class="text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-red-600 tracking-tighter leading-none">FORGE</h3>
                     <div class="text-slate-800 text-3xl font-black opacity-10 absolute top-4 left-1/2 -translate-x-1/2 blur-sm select-none">FORGE</div>
                 </div>
 
-                <!-- Drag Zone -->
                 <div class="border-2 border-dashed border-slate-700 bg-slate-800/20 rounded-xl h-28 flex flex-col items-center justify-center mb-6 group cursor-pointer hover:border-orange-500/50 hover:bg-slate-800/40 transition-all">
                     <p class="text-slate-300 font-bold text-sm group-hover:text-white transition-colors">DRAG INSTALLERS HERE</p>
                     <p class="text-xs text-slate-500 mt-1">(Binary Analysis: Inno/NSIS/WiX Detected)</p>
                 </div>
 
-                <!-- Input: File Name -->
                 <div class="mb-4">
                     <div class="w-full bg-[#0a0f1c] border border-white/10 text-slate-300 text-sm rounded-lg p-3 flex justify-between items-center">
                         <span>ZoomInstallerFull.exe</span>
@@ -197,7 +197,6 @@
                     </div>
                 </div>
 
-                <!-- Dropdowns Row -->
                 <div class="grid grid-cols-2 gap-4 mb-4">
                     <div>
                         <label class="text-xs text-slate-500 font-medium mb-1 block">Output Format</label>
@@ -218,13 +217,11 @@
                     </div>
                 </div>
 
-                <!-- Post Install Commands (From Manual) -->
                 <div class="mb-6">
                     <label class="text-xs text-slate-500 font-medium mb-1 block">Post-Install Commands (Injected into Try/Catch)</label>
                     <textarea id="post-install" oninput="updateSim()" class="w-full bg-[#0a0f1c] border border-white/10 text-slate-400 font-mono text-xs rounded-lg p-3 h-20 outline-none focus:border-orange-500 transition-colors resize-none" placeholder="# Example: New-ItemProperty -Path HKLM:\... -Name 'Server'"></textarea>
                 </div>
 
-                <!-- Main Button -->
                 <div class="mt-auto" id="forge-btn-container">
                     <button onclick="runForge()" class="w-full py-4 bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-500 hover:to-red-500 text-white font-black tracking-wide rounded-lg shadow-lg shadow-orange-900/40 transition-all hover:scale-[1.01] active:scale-[0.99]">
                         FORGE PACKAGE
@@ -244,7 +241,6 @@
                 <div class="flex-1 bg-[#050912] rounded-xl border border-white/5 p-4 overflow-auto custom-scrollbar relative">
                     <pre id="code-preview" class="font-mono text-xs leading-relaxed"></pre>
                     
-                    <!-- Success Overlay -->
                     <div id="success-overlay" class="absolute inset-0 bg-black/90 flex flex-col items-center justify-center backdrop-blur-sm hidden animate-fade-in">
                         <i class="ph-fill ph-check-circle text-green-500 text-6xl mb-4"></i>
                         <span class="text-white font-bold text-xl tracking-tight">Package Ready</span>
@@ -377,6 +373,64 @@
                             <i class="ph-bold ph-lock"></i> Payments secured by <strong>Lemon Squeezy</strong>
                         </p>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT / SUPPORT SECTION -->
+    <section id="contact" class="py-24 px-6 border-t border-white/5 relative bg-slate-950">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-16">
+                <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-slate-900 border border-white/10 mb-6 shadow-xl">
+                    <i class="ph-duotone ph-lifebuoy text-3xl text-orange-500"></i>
+                </div>
+                <h2 class="text-3xl font-bold text-white mb-4">Enterprise Support</h2>
+                <p class="text-slate-400 text-lg">
+                    Need help configuring complex deployments or have feedback on the app?
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Info Card -->
+                <div class="glass-card p-8 flex flex-col justify-center gap-6">
+                    <div>
+                        <span class="text-xs font-bold text-slate-500 uppercase tracking-widest block mb-2">Direct Email</span>
+                        <a href="mailto:support@silentforge.dev" class="text-2xl font-bold text-white hover:text-orange-500 transition flex items-center gap-2">
+                            <i class="ph-bold ph-envelope-simple"></i> support@silentforge.dev
+                        </a>
+                    </div>
+                    <div>
+                        <span class="text-xs font-bold text-slate-500 uppercase tracking-widest block mb-2">Response Time</span>
+                        <p class="text-white flex items-center gap-2"><i class="ph-fill ph-clock text-orange-500"></i> Within 4-12 hours</p>
+                    </div>
+                    <div class="mt-4 p-4 bg-orange-500/10 border border-orange-500/20 rounded-lg">
+                        <p class="text-orange-200 text-sm"><i class="ph-bold ph-info mr-1"></i> For license recovery, please include your order number.</p>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="glass-card p-8">
+                    <form onsubmit="sendEmail(event)" class="flex flex-col gap-4">
+                        <div>
+                            <label class="text-xs font-bold text-slate-500 uppercase tracking-widest mb-2 block">I need help with...</label>
+                            <select id="feedback-type" class="w-full bg-[#0a0f1c] border border-white/10 text-white p-3 rounded-lg outline-none focus:border-orange-500 transition">
+                                <option value="Support">Technical Support Request</option>
+                                <option value="Feedback">Product Feedback / Feature Request</option>
+                                <option value="License">License & Billing</option>
+                                <option value="Other">Other Inquiry</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label class="text-xs font-bold text-slate-500 uppercase tracking-widest mb-2 block">Your Message</label>
+                            <textarea id="feedback-msg" required class="w-full bg-[#0a0f1c] border border-white/10 text-white p-3 rounded-lg h-32 outline-none focus:border-orange-500 transition resize-none placeholder-slate-600" placeholder="Describe your issue or feedback here..."></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full py-3 bg-white text-black font-bold rounded-lg hover:bg-slate-200 transition flex items-center justify-center gap-2">
+                            Send Message <i class="ph-bold ph-paper-plane-right"></i>
+                        </button>
+                    </form>
                 </div>
             </div>
         </div>
@@ -520,9 +574,30 @@ Compiling...`;
 
         updateSim(); // Init
 
-        // --- 4. Checkout Alert ---
+        // --- 4. CHECKOUT FUNCTION (EDIT THIS) ---
         function checkout() {
-            alert("Redirecting to Lemon Squeezy secure checkout...");
+            // ============================================
+            // PASTE YOUR LEMON SQUEEZY LINK BELOW
+            // ============================================
+            const lemonSqueezyUrl = "https://silentforge.lemonsqueezy.com/buy/f486cc64-2376-43d2-a92e-2974b61280e6"; 
+            
+            if(lemonSqueezyUrl === "YOUR_LINK_HERE") {
+                alert("Please open index.html and paste your Lemon Squeezy link in the checkout() function!");
+            } else {
+                window.location.href = lemonSqueezyUrl;
+            }
+        }
+
+        // --- 5. EMAIL FORM LOGIC ---
+        function sendEmail(e) {
+            e.preventDefault();
+            const type = document.getElementById('feedback-type').value;
+            const msg = document.getElementById('feedback-msg').value;
+            const subject = `[${type}] Silent Forge Inquiry`;
+            const body = `${msg}`; // Simple body format
+            
+            // Open default mail client
+            window.location.href = `mailto:support@silentforge.dev?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
         }
     </script>
 </body>
