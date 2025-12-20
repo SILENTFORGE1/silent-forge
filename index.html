@@ -942,13 +942,13 @@ Encryption: AES-256
 
         updateSim(); // Init
 
-        // --- 4. CHECKOUT FUNCTION (EDIT THIS) ---
+        // --- 4. CHECKOUT FUNCTION (MULTI-TIER RESTORED) ---
         function checkout(tier) {
             // ============================================
             // PASTE YOUR LEMON SQUEEZY LINKS BELOW
             // ============================================
-            const standardUrl = "https://silentforge.lemonsqueezy.com/checkout/buy/6552fda9-58ee-4a74-8320-564b550f54e0?enabled=1162094"; // $499 Lifetime
-            const professionalUrl = "https://silentforge.lemonsqueezy.com/checkout/buy/a729bf55-07ba-46c6-9e79-831ba6e8f612?enabled=1154656"; // $1,499 Year
+            const standardUrl = "https://silentforge.lemonsqueezy.com/checkout/buy/6552fda9-58ee-4a74-8320-564b550f54e0?enabled=1162094"; 
+            const professionalUrl = "https://silentforge.lemonsqueezy.com/checkout/buy/a729bf55-07ba-46c6-9e79-831ba6e8f612?enabled=1154656"; 
             
             let targetUrl = standardUrl; // Default
             
@@ -956,7 +956,6 @@ Encryption: AES-256
                 targetUrl = professionalUrl;
             }
 
-            // Removed the alert check since you provided the links
             window.location.href = targetUrl;
         }
 
