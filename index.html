@@ -589,7 +589,7 @@
 
                 <!-- Call to Action -->
                 <div class="text-center pt-16">
-                     <button onclick="switchView('home'); setTimeout(() => document.getElementById('pricing').scrollIntoView({behavior: 'smooth'}), 100)" class="inline-block px-10 py-5 rounded-full bg-white text-black font-black text-xl hover:bg-slate-200 transition-all cursor-pointer shadow-xl transform hover:scale-105 border-none">
+                     <button onclick="checkout('standard')" class="inline-block px-10 py-5 rounded-full bg-white text-black font-black text-xl hover:bg-slate-200 transition-all cursor-pointer shadow-xl transform hover:scale-105 border-none">
                         Start Automating Today
                     </button>
                 </div>
@@ -956,11 +956,8 @@ Encryption: AES-256
                 targetUrl = professionalUrl;
             }
 
-            if(targetUrl === "https://silentforge.lemonsqueezy.com/checkout/buy/a729bf55-07ba-46c6-9e79-831ba6e8f612?enabled=1154656") {
-                alert("https://silentforge.lemonsqueezy.com/checkout/buy/a729bf55-07ba-46c6-9e79-831ba6e8f612?enabled=1154656");
-            } else {
-                window.location.href = targetUrl;
-            }
+            // Removed the alert check since you provided the links
+            window.location.href = targetUrl;
         }
 
         function sendEmail(e) {
@@ -970,5 +967,3 @@ Encryption: AES-256
     </script>
 </body>
 </html>
-
-
