@@ -132,6 +132,7 @@
             <div class="hidden md:flex gap-8 text-sm font-medium text-slate-400">
                 <button onclick="switchView('home')" class="hover:text-white transition-colors cursor-pointer bg-transparent border-none">Product</button>
                 <button onclick="switchView('features')" class="hover:text-white transition-colors cursor-pointer flex items-center gap-1 bg-transparent border-none"><i class="ph-bold ph-star text-orange-500"></i> Features Deep Dive</button>
+                <button onclick="switchView('about')" class="hover:text-white transition-colors cursor-pointer bg-transparent border-none">About</button>
                 <button onclick="switchView('home'); setTimeout(() => document.getElementById('pricing').scrollIntoView({behavior: 'smooth'}), 100)" class="hover:text-white transition-colors cursor-pointer bg-transparent border-none">Pricing</button>
                 <button onclick="switchView('home'); setTimeout(() => document.getElementById('contact').scrollIntoView({behavior: 'smooth'}), 100)" class="hover:text-white transition-colors cursor-pointer bg-transparent border-none">Support</button>
             </div>
@@ -477,6 +478,125 @@
         </section>
     </div>
 
+    <!-- === VIEW: ABOUT (WHY SILENT FORGE?) === -->
+    <div id="view-about" class="view-hidden pt-32 pb-20 px-6">
+        <div class="max-w-6xl mx-auto text-center">
+            <button onclick="switchView('home')" class="inline-flex items-center text-orange-500 hover:text-orange-400 mb-6 cursor-pointer font-bold tracking-wide bg-transparent border-none">
+                <i class="ph-bold ph-arrow-left mr-2"></i> Back to Product
+            </button>
+            
+            <h2 class="text-5xl md:text-7xl font-black text-white mb-10 leading-tight">
+                The Definitive<br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-red-600">Windows Automated Packaging Tool.</span>
+            </h2>
+            
+            <p class="text-xl text-slate-400 max-w-3xl mx-auto mb-24 leading-relaxed">
+                Silent Forge isn't just another wrapper script. It is the only platform that uses <strong>Binary Analysis</strong> to read an installer's DNA and automatically generate secure, compliant deployment code.
+            </p>
+
+            <div class="space-y-20 text-left">
+                
+                <!-- Section 1: The Automation Engine -->
+                <div class="glass-card p-12 rounded-3xl">
+                    <div class="grid md:grid-cols-2 gap-12 items-center">
+                        <div>
+                            <h3 class="text-3xl font-bold text-white mb-6">Automated Logic vs. Manual Guesswork</h3>
+                            <p class="text-slate-300 text-lg leading-relaxed mb-6">
+                                Legacy tools force you to Google "silent switches" for every app. Silent Forge scans the file header (Inno, NSIS, WiX) and applies the scientifically correct arguments instantly.
+                            </p>
+                            <ul class="space-y-4 text-slate-400">
+                                <li class="flex items-center gap-3">
+                                    <i class="ph-fill ph-check-circle text-green-500 text-xl"></i>
+                                    <span><strong>0% Error Rate:</strong> No more typos in install commands.</span>
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <i class="ph-fill ph-check-circle text-green-500 text-xl"></i>
+                                    <span><strong>Auto-Conflict Resolution:</strong> Automatically suppresses reboots and closes active processes.</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="bg-slate-900/50 p-6 rounded-xl border border-white/5 font-mono text-xs text-slate-400 leading-loose shadow-2xl">
+                            <span class="text-slate-500"># Traditional Method (Manual)</span><br>
+                            <span class="text-red-400">Start-Process "setup.exe" -Arg "/S" # Is it /S or /silent?</span><br>
+                            <br>
+                            <span class="text-slate-500"># Silent Forge Method (Automated)</span><br>
+                            <span class="text-green-400">[Reactor] Detected NSIS Header (Nullsoft)</span><br>
+                            <span class="text-blue-400">$Args</span> = <span class="text-yellow-300">"/S /NCRC"</span> <span class="text-slate-500"># Auto-Applied</span><br>
+                            <span class="text-green-400">[Reactor] Verified Digital Signature: Valid</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section 2: Comparison Table -->
+                <div class="overflow-x-auto">
+                    <h3 class="text-3xl font-bold text-white mb-8 text-center">Crushing the Competition</h3>
+                    <table class="w-full text-left border-collapse">
+                        <thead>
+                            <tr class="border-b border-white/10 text-slate-400 uppercase text-xs tracking-wider">
+                                <th class="py-6 px-4">Feature</th>
+                                <th class="py-6 px-4 text-center text-orange-500 font-bold bg-orange-500/5 rounded-t-xl">Silent Forge</th>
+                                <th class="py-6 px-4 text-center">Agent-Based Tools (PDQ Deploy)</th>
+                                <th class="py-6 px-4 text-center">Legacy Tools (AdminStudio)</th>
+                                <th class="py-6 px-4 text-center">Manual Scripting</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-slate-300 text-sm">
+                            <tr class="border-b border-white/5 hover:bg-white/5 transition">
+                                <td class="py-6 px-4 font-bold text-white">Packaging Speed</td>
+                                <td class="py-6 px-4 text-center text-green-400 font-bold bg-orange-500/5">10 Seconds</td>
+                                <td class="py-6 px-4 text-center">5-10 Minutes</td>
+                                <td class="py-6 px-4 text-center">15-45 Minutes</td>
+                                <td class="py-6 px-4 text-center">1+ Hours</td>
+                            </tr>
+                            <tr class="border-b border-white/5 hover:bg-white/5 transition">
+                                <td class="py-6 px-4 font-bold text-white">Intune Native (No Agent)</td>
+                                <td class="py-6 px-4 text-center text-green-400 font-bold bg-orange-500/5"><i class="ph-bold ph-check text-xl"></i></td>
+                                <td class="py-6 px-4 text-center"><i class="ph-bold ph-x text-red-500 text-xl"></i></td>
+                                <td class="py-6 px-4 text-center"><i class="ph-bold ph-check text-xl"></i></td>
+                                <td class="py-6 px-4 text-center"><i class="ph-bold ph-x text-red-500 text-xl"></i></td>
+                            </tr>
+                            <tr class="border-b border-white/5 hover:bg-white/5 transition">
+                                <td class="py-6 px-4 font-bold text-white">Cloud/DevOps Support (Terraform/Docker)</td>
+                                <td class="py-6 px-4 text-center text-green-400 font-bold bg-orange-500/5"><i class="ph-bold ph-check text-xl"></i></td>
+                                <td class="py-6 px-4 text-center"><i class="ph-bold ph-x text-red-500 text-xl"></i></td>
+                                <td class="py-6 px-4 text-center"><i class="ph-bold ph-x text-red-500 text-xl"></i></td>
+                                <td class="py-6 px-4 text-center"><i class="ph-bold ph-x text-red-500 text-xl"></i></td>
+                            </tr>
+                            <tr class="border-b border-white/5 hover:bg-white/5 transition">
+                                <td class="py-6 px-4 font-bold text-white">User-Mode Fix (Explorer Injection)</td>
+                                <td class="py-6 px-4 text-center text-green-400 font-bold bg-orange-500/5"><i class="ph-bold ph-check text-xl"></i></td>
+                                <td class="py-6 px-4 text-center"><i class="ph-bold ph-warning text-yellow-500 text-xl"></i> (Scripted)</td>
+                                <td class="py-6 px-4 text-center"><i class="ph-bold ph-x text-red-500 text-xl"></i></td>
+                                <td class="py-6 px-4 text-center"><i class="ph-bold ph-x text-red-500 text-xl"></i></td>
+                            </tr>
+                            <tr class="border-b border-white/5 hover:bg-white/5 transition">
+                                <td class="py-6 px-4 font-bold text-white">Compliance Reports (HTML)</td>
+                                <td class="py-6 px-4 text-center text-green-400 font-bold bg-orange-500/5"><i class="ph-bold ph-check text-xl"></i></td>
+                                <td class="py-6 px-4 text-center">Logs Only</td>
+                                <td class="py-6 px-4 text-center"><i class="ph-bold ph-x text-red-500 text-xl"></i></td>
+                                <td class="py-6 px-4 text-center"><i class="ph-bold ph-x text-red-500 text-xl"></i></td>
+                            </tr>
+                            <tr class="hover:bg-white/5 transition">
+                                <td class="py-6 px-4 font-bold text-white">Cost per Engineer</td>
+                                <td class="py-6 px-4 text-center text-green-400 font-bold bg-orange-500/5">$1,499 / yr</td>
+                                <td class="py-6 px-4 text-center">$1,500+ / yr / admin</td>
+                                <td class="py-6 px-4 text-center">$3,500+ / yr</td>
+                                <td class="py-6 px-4 text-center">$120/hr (Labor Cost)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Call to Action -->
+                <div class="text-center pt-16">
+                     <button onclick="switchView('home'); setTimeout(() => document.getElementById('pricing').scrollIntoView({behavior: 'smooth'}), 100)" class="inline-block px-10 py-5 rounded-full bg-white text-black font-black text-xl hover:bg-slate-200 transition-all cursor-pointer shadow-xl transform hover:scale-105 border-none">
+                        Start Automating Today
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- === VIEW: FEATURES DEEP DIVE (THE SALES PITCH) === -->
     <div id="view-features" class="view-hidden pt-32 pb-20 px-6">
         <div class="max-w-6xl mx-auto">
@@ -686,16 +806,23 @@
         function switchView(viewName) {
             const homeView = document.getElementById('view-home');
             const featuresView = document.getElementById('view-features');
+            const aboutView = document.getElementById('view-about');
             
+            // Hide all first
+            homeView.classList.add('view-hidden');
+            featuresView.classList.add('view-hidden');
+            aboutView.classList.add('view-hidden');
+
             // Scroll to top instantly
             window.scrollTo({ top: 0, behavior: 'instant' });
 
+            // Show target
             if (viewName === 'home') {
-                featuresView.classList.add('view-hidden');
                 homeView.classList.remove('view-hidden');
             } else if (viewName === 'features') {
-                homeView.classList.add('view-hidden');
                 featuresView.classList.remove('view-hidden');
+            } else if (viewName === 'about') {
+                aboutView.classList.remove('view-hidden');
             }
         }
 
@@ -763,15 +890,13 @@
     <span class="text-purple-400">interpreter</span> = [<span class="text-green-300">"PowerShell"</span>, <span class="text-green-300">"-Command"</span>]
   }
 }`;
-            } else if (format === 'intune') {
+            } else {
                 code = `<span class="text-slate-500">[Intune Package Info]</span>
 Source: .\\Source
 SetupFile: NodeJS_Installer_x64.msi
 Output: .\\Output\\NodeJS.intunewin
 Encryption: AES-256
 <span class="text-slate-500"># Audit Trail Generated: Compliance_Report.html</span>`;
-            } else {
-                 code = `<span class="text-slate-500"># Wrapper Generation...</span>`;
             }
             
             preview.innerHTML = code;
